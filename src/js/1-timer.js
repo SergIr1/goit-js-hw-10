@@ -106,7 +106,7 @@ const options = {
         closeOnEscape: true,
         closeOnClick: true,
         icon: 'font-icon',
-        iconUrl: "../img/close-modal-btn.svg", 
+        iconUrl: "./img/close-modal-btn.svg", 
 });
 
 
