@@ -34,6 +34,9 @@ const timer = {
 
     // Робимо кнопку і поле неактивними
     startBtn.disabled = true;
+    startBtn.classList.remove("active");
+    startBtn.classList.add("disabled");
+
     inputEl.disabled = true;
   },
 
@@ -43,6 +46,9 @@ const timer = {
 
     // Поле вводу стає активним після завершення таймера
     inputEl.disabled = false;
+
+  startBtn.disabled = true;
+  startBtn.classList.add("disabled");
   },
 
   convertMs(ms) {
@@ -73,6 +79,9 @@ const timer = {
 
 let userSelectedDate = null;
 
+startBtn.disabled = true;
+startBtn.classList.add("disabled");
+
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -89,9 +98,12 @@ const options = {
         timeout: 3000,
       });
       startBtn.disabled = true;
+      startBtn.classList.add("disabled");
       userSelectedDate = null;
     } else {
       startBtn.disabled = false;
+      startBtn.classList.remove("disabled");
+      startBtn.classList.add("active");
       userSelectedDate = selectedDate;
     }
   },
@@ -100,14 +112,14 @@ const options = {
 // Ініціалізація flatpickr
 flatpickr(inputEl, options);
 
-// Вимикаємо кнопку при завантаженні сторінки
-startBtn.disabled = true;
-
 // Обробник натискання кнопки "Start"
 startBtn.addEventListener("click", () => {
   if (!userSelectedDate) return;
 
   timer.start(userSelectedDate);
+
+  startBtn.disabled = true;
+  startBtn.classList.add("disabled");
 
   iziToast.success({
     title: "Success",
