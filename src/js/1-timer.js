@@ -18,8 +18,8 @@ const timer = {
       const ms = deadline - Date.now();
 
       if (ms <= 0) {
-        this.stop(); // Зупиняємо таймер
-        this.updateUI(0, 0, 0, 0); // Оновлюємо інтерфейс
+        this.stop(); // Зупиняю таймер
+        this.updateUI(0, 0, 0, 0); // Оновлюю інтерфейс
         return;
       }
 
@@ -32,7 +32,7 @@ const timer = {
       );
     }, 1000);
 
-    // Робимо кнопку і поле неактивними
+    // Тут робилю кнопку і поле неактивними
     startBtn.disabled = true;
     startBtn.classList.remove("active");
     startBtn.classList.add("disabled");
@@ -44,11 +44,11 @@ const timer = {
     clearInterval(this.intervalID);
     this.intervalID = null;
 
-    // Поле вводу стає активним після завершення таймера
+    // Тут зробив поле вводу активним після завершення таймера
     inputEl.disabled = false;
 
-  startBtn.disabled = true;
-  startBtn.classList.add("disabled");
+    startBtn.disabled = true;
+    startBtn.classList.add("disabled");
   },
 
   convertMs(ms) {
@@ -109,10 +109,10 @@ const options = {
   },
 };
 
-// Ініціалізація flatpickr
+// Ініціалізував flatpickr
 flatpickr(inputEl, options);
 
-// Обробник натискання кнопки "Start"
+
 startBtn.addEventListener("click", () => {
   if (!userSelectedDate) return;
 
