@@ -1,5 +1,4 @@
 @import "flatpickr/dist/flatpickr.min.css";
-@import "izitoast/dist/css/iziToast.min.css";
 
 * {
     box-sizing: border-box;
@@ -17,11 +16,11 @@ button {
     cursor: pointer;
 }
 
-img {
+/* img {
     display: block;
     max-width: 100%;
     height: auto;
-}
+} */
 
 .timer-input {
     width: 272px;
@@ -105,4 +104,35 @@ button.disabled:focus {
     font-size: 16px;
     line-height: 1.5;
     color: #2e2f42;
+}
+
+
+.iziToast {
+    width: 302px;
+    height: 64px;
+    padding: 20px;
+    border-bottom: 2px solid #ffbebe;
+    border-radius: 4px;
+}
+
+/* .iziToast-icon {
+    border: 2px solid #fafafb;
+    border-radius: 50px;
+} */
+
+/* .iziToast-icon img{
+    fill: #fafafb;
+} */
+
+.iziToast-title{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+}
+
+.iziToast-message {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
 }

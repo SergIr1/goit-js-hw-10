@@ -1,5 +1,6 @@
 import flatpickr from "flatpickr";
 import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
 
 const inputEl = document.querySelector("#datetime-picker");
 const startBtn = document.querySelector("[data-start]");
@@ -95,8 +96,20 @@ const options = {
       iziToast.error({
         title: "Error",
         message: "Please choose a date in the future",
-        timeout: 3000,
-      });
+        timeout: 3500,
+        position: "topRight",
+        titleColor: "#ffffff",
+        messageColor: "#ffffff",
+        backgroundColor: "#ef4040",
+        close: false,
+        closeIcon: false, 
+        closeOnEscape: true,
+        closeOnClick: true,
+        icon: 'font-icon',
+        iconUrl: "../img/close-modal-btn.svg", 
+});
+
+
       startBtn.disabled = true;
       startBtn.classList.add("disabled");
       userSelectedDate = null;
@@ -121,9 +134,9 @@ startBtn.addEventListener("click", () => {
   startBtn.disabled = true;
   startBtn.classList.add("disabled");
 
-  iziToast.success({
-    title: "Success",
-    message: "Timer started",
-    timeout: 2000,
-  });
+  // iziToast.success({
+  //   title: "Success",
+  //   message: "Timer started",
+  //   timeout: 250,
+  // });
 });
