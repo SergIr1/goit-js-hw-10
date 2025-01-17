@@ -110,8 +110,8 @@ const options = {
         iconUrl: "/img/close-modal-btn.svg", 
 });
 
-      console.log(new URL("../img/close-modal-btn.svg", import.meta.url).href);
-      
+      console.log(new URL("/img/close-modal-btn.svg", import.meta.url).href);
+
       startBtn.disabled = true;
       startBtn.classList.add("disabled");
       userSelectedDate = null;
