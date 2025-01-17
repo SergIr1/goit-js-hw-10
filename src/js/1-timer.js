@@ -106,7 +106,7 @@ const options = {
         closeOnEscape: true,
         closeOnClick: true,
         icon: 'font-icon',
-        iconUrl: "/img/close-modal-btn.svg", 
+        iconUrl: import icon from "/img/close-modal-btn.svg", 
 });
 
       console.log(new URL("/img/close-modal-btn.svg", import.meta.url).href);
