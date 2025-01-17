@@ -1,7 +1,8 @@
 import flatpickr from "flatpickr";
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
-
+import icon from "/img/close-modal-btn.svg";
+  
 const inputEl = document.querySelector("#datetime-picker");
 const startBtn = document.querySelector("[data-start]");
 
@@ -106,10 +107,11 @@ const options = {
         closeOnEscape: true,
         closeOnClick: true,
         icon: 'font-icon',
-        iconUrl: "../img/close-modal-btn.svg", 
+        iconUrl: "/img/close-modal-btn.svg", 
 });
 
-
+      console.log(new URL("../img/close-modal-btn.svg", import.meta.url).href);
+      
       startBtn.disabled = true;
       startBtn.classList.add("disabled");
       userSelectedDate = null;
