@@ -21,7 +21,7 @@ const timer = {
 
       if (ms <= 0) {
         this.stop(); // Зупиняю таймер
-        this.updateUI(0, 0, 0, 0); // Оновлюю інтерфейс
+        this.updateUI(0, 0, 0, 0); // ппісля того як зупиниця таймер оновлюю інтерфейс
         return;
       }
 
@@ -110,7 +110,7 @@ const options = {
         iconUrl: closeModalIcon, 
 });
 
-      console.log(new URL("/img/close-modal-btn.svg", import.meta.url).href);
+      console.log(new URL("../img/close-modal-btn.svg", import.meta.url).href);  // проверял коректно ли адресс указываю для iconUrl
 
       startBtn.disabled = true;
       startBtn.classList.add("disabled");
