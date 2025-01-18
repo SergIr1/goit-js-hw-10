@@ -21,6 +21,8 @@ formEl.addEventListener('submit', event => {
 
       console.log('Delay:', delay);
       console.log('State:', state);
+    
+    formEl.reset();
 
     const promise = new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -64,5 +66,4 @@ formEl.addEventListener('submit', event => {
         });
     });
 })
-
 
