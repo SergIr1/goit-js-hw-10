@@ -5,6 +5,12 @@ import okModalIcon from "/img/ok-modal-btn.svg";
 
 const formEl = document.querySelector('.form');
 
+// const delay = document.querySelector('input[name="delay"]').value;
+// const state = document.querySelector('input[name="state"]:checked').value;
+
+// console.log('Delay:', delay);
+// console.log('State:', state);
+
 formEl.addEventListener('submit', event => {
     event.preventDefault();
 
@@ -13,8 +19,8 @@ formEl.addEventListener('submit', event => {
     const delay = Number(formDate.get('delay'));
     const state = formDate.get('state');
 
-    //   console.log('Delay:', delay);
-    //   console.log('State:', state);
+      console.log('Delay:', delay);
+      console.log('State:', state);
 
     const promise = new Promise((resolve, reject) => {
         setTimeout(() => {
