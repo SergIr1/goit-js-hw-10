@@ -21,6 +21,8 @@ formEl.addEventListener('submit', event => {
 
       console.log('Delay:', delay);
       console.log('State:', state);
+
+    console.log(formDate);
     
     formEl.reset();
 
